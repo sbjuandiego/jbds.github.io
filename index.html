@@ -78,11 +78,11 @@
 
     .product-card {
       background-color: var(--card-dark);
-      border: 1px solid var(--accent-light);
-      border-radius: 8px;
+      border: 2px solid transparent;
+      border-radius: 32px;
       padding: 1rem;
       text-align: center;
-      transition: transform 0.2s ease;
+      transition: border 0.3s ease, transform 0.3s ease;
     }
 
     .product-card:hover {
@@ -92,7 +92,7 @@
 
     .product-card img {
       max-width: 100%;
-      border-radius: 6px;
+      border-radius: 24px;
     }
 
     .product-card h3 {
@@ -116,12 +116,13 @@
       padding: 0.5rem 1rem;
       background-color: var(--accent-light);
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       color: var(--bg-dark);
       font-weight: bold;
       cursor: pointer;
       text-decoration: none;
       display: inline-block;
+      transition: background-color 0.3s ease;
     }
 
     .whatsapp-btn:hover {
@@ -155,25 +156,35 @@
 
   <section class="products">
     <div class="product-card">
-      <img src="https://via.placeholder.com/250x150" alt="Producto 1">
-      <h3>Acción Minimal</h3>
-      <p>Diseño funcional con estética moderna.</p>
-      <div class="price">$19.99</div>
-      <a class="whatsapp-btn" href="https://wa.me/p/1234567890123456/573001234567" target="_blank">Ver en WhatsApp</a>
+      <img src="https://i.imgur.com/pqT7WMq_d.webp?maxwidth=760&fidelity=grand" alt="Microsoft 365">
+      <h3>Microsoft 365 + Activación</h3>
+      <p>Instalación completa de Office con licencia activada. Incluye Word, Excel, PowerPoint, Publisher, OneNote y Access.</p>
+      <div class="price">$49.99</div>
+      <a class="whatsapp-btn" href="https://wa.me/p/4567890123456789/573001234567" target="_blank">Ver en WhatsApp</a>
     </div>
+
     <div class="product-card">
-      <img src="https://via.placeholder.com/250x150" alt="Producto 2">
-      <h3>Convivencia Pro</h3>
-      <p>Ideal para espacios compartidos y creativos.</p>
-      <div class="price">$29.99</div>
-      <a class="whatsapp-btn" href="https://wa.me/p/2345678901234567/573001234567" target="_blank">Ver en WhatsApp</a>
-    </div>
-    <div class="product-card">
-      <img src="https://via.placeholder.com/250x150" alt="Producto 3">
-      <h3>Paz Urbana</h3>
-      <p>Estilo relajado con impacto visual.</p>
+      <img src="/attachments/ZwbuU6T2a7bbvUMjfWC2Y.png" alt="Windows 10/11">
+      <h3>Windows 10 / 11 + Activación</h3>
+      <p>Instalación profesional de Windows 10 o Windows 11 con activación oficial de licencia. Ideal para equipos nuevos o actualizaciones seguras.</p>
       <div class="price">$39.99</div>
-      <a class="whatsapp-btn" href="https://wa.me/p/3456789012345678/573001234567" target="_blank">Ver en WhatsApp</a>
+      <a class="whatsapp-btn" href="https://wa.me/p/5678901234567890/573001234567" target="_blank">Ver en WhatsApp</a>
+    </div>
+
+    <div class="product-card">
+      <img src="/attachments/1ReYBD44tJaDqkLhAGYCB.png" alt="Chrome OS Flex">
+      <h3>Chrome OS Flex</h3>
+      <p>Instalación de Chrome OS Flex para portátiles de bajos recursos. Rápido, ligero y respaldado por Google.</p>
+      <div class="price">$29.99</div>
+      <a class="whatsapp-btn" href="https://wa.me/p/6789012345678901/573001234567" target="_blank">Ver en WhatsApp</a>
+    </div>
+
+    <div class="product-card">
+      <img src="/attachments/BpN3pBy9JgubJgfXcZt9i.png" alt="Adobe Creative Cloud">
+      <h3>Adobe Creative Cloud + Activación</h3>
+      <p>Instalación completa de Adobe Creative Cloud con licencia activada. Incluye Photoshop, Illustrator, Premiere, After Effects, XD, Lightroom, InDesign y más.</p>
+      <div class="price">$59.99</div>
+      <a class="whatsapp-btn" href="https://wa.me/p/7890123456789012/573001234567" target="_blank">Ver en WhatsApp</a>
     </div>
   </section>
 
