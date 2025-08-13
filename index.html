@@ -19,6 +19,7 @@
       font-family: var(--font-main);
       background-color: var(--bg-dark);
       color: var(--text-light);
+      scroll-behavior: smooth;
     }
 
     header {
@@ -50,10 +51,67 @@
       color: var(--accent-hover);
     }
 
+    .cover {
+      height: 100vh;
+      background: linear-gradient(135deg, #ff8a80, #ff80ab, #ea80fc);
+      background-size: 600% 600%;
+      animation: gradientShift 15s ease infinite;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .cover h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .cover p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 2rem;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    .cover a {
+      background-color: #fff;
+      color: #121212;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .cover a:hover {
+      transform: scale(1.05);
+      background-color: #fce4ec;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero, .products, footer {
+      background-color: var(--card-dark);
+    }
+
     .hero {
       padding: 3rem 2rem;
       text-align: center;
-      background-color: var(--card-dark);
     }
 
     .hero h2 {
@@ -130,11 +188,16 @@
     }
 
     footer {
-      background-color: var(--card-dark);
       text-align: center;
       padding: 1rem;
       font-size: 0.8rem;
       color: var(--accent-light);
+      border-top: 1px solid #333;
+      transition: background-color 0.3s ease;
+    }
+
+    footer:hover {
+      background-color: #1a1a1a;
     }
   </style>
 </head>
@@ -144,17 +207,23 @@
     <img src="https://i.imgur.com/gZhwd29_d.webp?maxwidth=760&fidelity=grand" alt="JBDS Logo">
     <nav>
       <a href="#">Inicio</a>
-      <a href="#">Productos</a>
+      <a href="#productos">Productos</a>
       <a href="#">Contacto</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Estilo, acción y convivencia</h2>
-    <p>Bienvenido a JBDS Stock Neiva, tu espacio para encontrar productos con identidad, diseño y propósito. Conecta con lo que te representa.</p>
+  <section class="cover">
+    <h1>Bienvenido a JBDS Stock Neiva</h1>
+    <p>Soluciones digitales con estilo, velocidad y confianza. ¡Explora lo que tenemos para ti!</p>
+    <a href="#productos">Explorar productos</a>
   </section>
 
-  <section class="products">
+  <section class="hero">
+    <h2>Estilo, acción y convivencia</h2>
+    <p>Tu espacio para encontrar productos con identidad, diseño y propósito. Conecta con lo que te representa.</p>
+  </section>
+
+  <section class="products" id="productos">
     <div class="product-card">
       <img src="https://i.imgur.com/pqT7WMq_d.webp?maxwidth=760&fidelity=grand" alt="Microsoft 365">
       <h3>Microsoft 365 + Activación</h3>
@@ -164,7 +233,7 @@
     </div>
 
     <div class="product-card">
-      <img src="/attachments/ZwbuU6T2a7bbvUMjfWC2Y.png" alt="Windows 10/11">
+      <img src="https://i.imgur.com/ll9NTRk_d.webp?maxwidth=760&fidelity=grand" alt="Windows 10/11">
       <h3>Windows 10 / 11 + Activación</h3>
       <p>Instalación profesional de Windows 10 o Windows 11 con activación oficial de licencia. Ideal para equipos nuevos o actualizaciones seguras.</p>
       <div class="price">$39.99</div>
@@ -172,25 +241,41 @@
     </div>
 
     <div class="product-card">
-      <img src="/attachments/1ReYBD44tJaDqkLhAGYCB.png" alt="Chrome OS Flex">
+      <img src="https://i.imgur.com/OvgCVYh_d.webp?maxwidth=760&fidelity=grand" alt="Chrome OS Flex">
       <h3>Chrome OS Flex</h3>
       <p>Instalación de Chrome OS Flex para portátiles de bajos recursos. Rápido, ligero y respaldado por Google.</p>
       <div class="price">$29.99</div>
       <a class="whatsapp-btn" href="https://wa.me/p/6789012345678901/573001234567" target="_blank">Ver en WhatsApp</a>
     </div>
 
-    <div class="product-card">
-      <img src="/attachments/BpN3pBy9JgubJgfXcZt9i.png" alt="Adobe Creative Cloud">
-      <h3>Adobe Creative Cloud + Activación</h3>
-      <p>Instalación completa de Adobe Creative Cloud con licencia activada. Incluye Photoshop, Illustrator, Premiere, After Effects, XD, Lightroom, InDesign y más.</p>
+      <div class="product-card">
+      <img src="https://i.imgur.com/6Kkj0su_d.webp?maxwidth=760&fidelity=grand" alt="Adobe Creative Cloud">
+      <h3>Adobe Creative Cloud</h3>
+      <p>Instalación de Photoshop, Illustrator, Premiere Pro y más. Ideal para creadores visuales y editores profesionales.</p>
       <div class="price">$59.99</div>
       <a class="whatsapp-btn" href="https://wa.me/p/7890123456789012/573001234567" target="_blank">Ver en WhatsApp</a>
     </div>
   </section>
 
-  <footer>
-    &copy; 2025 JBDS Stock Neiva. Inspirado en tu identidad. Todos los derechos reservados.
-  </footer>
+  <section class="products" id="productos">
+  <!-- ... tus cuatro productos existentes ... -->
+</section>
 
-</body>
-</html>
+<section class="products" id="combos">
+  <h2 style="grid-column: 1 / -1; text-align: center; font-size: 2rem; margin-bottom: 1rem; color: var(--accent-light);">
+    Combos disponibles
+  </h2>
+
+  <div class="product-card">
+    <img src="https://i.imgur.com/ajeWJ4u.png" alt="Combo Windows + Office">
+    <h3>Combo Windows + Office</h3>
+    <p>Instalación de Windows 10/11 + Microsoft 365 activado. Ideal para equipos nuevos o actualizaciones completas.</p>
+    <div class="price">$79.99</div>
+    <a class="whatsapp-btn" href="https://wa.me/p/8901234567890123/573001234567" target="_blank">Ver en WhatsApp</a>
+  </div>
+</section>
+
+  <footer>
+    © 2025 JBDS Stock Neiva. Todos los derechos reservados.  
+    <br>Diseñado con identidad por Juan Diego Solano Bermeo.
+  </footer>
